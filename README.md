@@ -7,9 +7,11 @@
 4. Data
 
 ## Steps
-1. Install Flask
+1. Install Flask and .env
 ```python
 pip install Flask requests
+pip install python-dotenv
 ```
+2. Create .env and add API Key eBay and Stripe inside.
 
 
