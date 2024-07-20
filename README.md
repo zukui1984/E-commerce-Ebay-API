@@ -13,9 +13,9 @@ pip install Flask requests python-dotenv stripe
 ```
 2. Create .env
 3. Create eBay - Application Key & User Token (Auth'n'Auth)
-  - Create project name: ecommerce_2024
-  - Application Key: App ID (Client ID), Dev ID, Cert ID (Client Secret)
-  - Create Sandbox to get User Token
+    - Create project name: ecommerce_2024
+    - Application Key: App ID (Client ID), Dev ID, Cert ID (Client Secret)
+    - Create Sandbox to get User Token
 5. Add API Key eBay (App ID & User Token) & Stripe on .env
 6. 
 
