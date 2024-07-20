@@ -9,5 +9,7 @@
 ## Steps
 1. Install Flask
 ```python
-pip install flask
+pip install Flask requests
 ```
+
+
