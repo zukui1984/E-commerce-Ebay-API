@@ -1,4 +1,4 @@
-# E-commerce Flask
+# E-commerce eBay API
 
 ## Tech requirements
 1. Python / Flask (Python framework)
