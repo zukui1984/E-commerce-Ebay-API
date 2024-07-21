@@ -4,7 +4,15 @@
 1. Python / Flask (Python framework)
 2. eBay Developer Program
 3. API - eBay (products) and Stripe (payment)
-4. 
+
+## File structure
+```bash
+ecommerce-flask/
+├── app.py
+├── .env
+├── templates/
+│   └── index.html
+```
 
 ## Instructions
 1. Install Flask, dotenv (.env), Stripe
@@ -15,11 +23,26 @@ pip install Flask requests python-dotenv stripe
 3. Create eBay - Application Key & User Token (Auth'n'Auth)
     - Create project name: **ecommerce_2024**
     - **Application Key**: App ID (Client ID), Dev ID, Cert ID (Client Secret)
+![application keys_stricts](https://github.com/user-attachments/assets/73b11c2e-df8a-4bc5-a4ef-451f379831e8)
     - Create Sandbox to get User Token
 5. Add API Key eBay (App ID & User Token) & Stripe on .env
-6. To run the application
+![image](https://github.com/user-attachments/assets/17e6fef9-4d22-4956-bbd6-2173915df976)
+7. Create API Endpoints
+    -  GET /products: Fetches product data from eBay's sandbox API
+    -  POST /checkout: Creates a Stripe checkout session for payment processing.
+8. To run the application
 ```python
 python app.py
 ```
+![image](https://github.com/user-attachments/assets/00cc23bd-7d2c-4c1e-a159-594568f8ba2e)
+
+9. To view product list - JSON
+```
+http://localhost:5000/products
+```
+![image](https://github.com/user-attachments/assets/e15b02c3-27ef-4e25-bca4-9d14b034b940)
+
+
+
 
 
