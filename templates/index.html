@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .product {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            width: 30%;
+        }
+        .product img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>E-commerce App</h1>
+    <div id="product-list"></div>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripePublishableKey = "{{ stripe_publishable_key }}";
+        const stripe = Stripe(stripePublishableKey);
+
+        fetch('/products')
+            .then(response => response.json())
+            .then(products => {
+                const productList = document.getElementById('product-list');
+                products.forEach(product => {
+                    const productElement = document.createElement('div');
+                    productElement.className = 'product';
+                    productElement.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}">
+                        <h2>${product.name}</h2>
+                        <p>Unit Price: $${product.price.toFixed(2)}</p>
+                        <button onclick="buyProduct('${product.id}', '${product.name}', ${product.price}, '${product.image}', '${product.url}')">Buy</button>
+                    `;
+                    productList.appendChild(productElement);
+                });
+            });
+
+        function buyProduct(id, name, price, image, url) {
+            fetch('/checkout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id: id,
+                    name: name,
+                    unit_price: price,
+                    image_url: image,
+                    quantity: 1
+                }),
+            })
+            .then(response => response.json())
+            .then(session => {
+                stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
