@@ -31,8 +31,25 @@ pip install Flask requests python-dotenv stripe
 4. Add API Key eBay (App ID & User Token) & Stripe on .env
    
 <img src="https://github.com/user-attachments/assets/17e6fef9-4d22-4956-bbd6-2173915df976" width="700" />
+        
+5. Create API Endpoints - [complete code](https://github.com/zukui1984/E-commerce-Flask/blob/master/app.py)
+   
+    -  GET /products: Fetches product data from eBay's sandbox API
+    -  POST /checkout: Creates a Stripe checkout session for payment processing.
+    
+6. To run the application
+```python
+python app.py
+```
+<img src="https://github.com/user-attachments/assets/00cc23bd-7d2c-4c1e-a159-594568f8ba2e" width="700" />
 
-5. Set up Heroku
+7. To view product list - JSON
+```
+http://localhost:5000/products
+```
+<img src="https://github.com/user-attachments/assets/e15b02c3-27ef-4e25-bca4-9d14b034b940" width="700" />
+
+8. Set up Heroku
     - Install & register heroku  
     - Run "heroku login"
     - Run "create heroku ecommerce_2024"
@@ -43,26 +60,5 @@ pip install Flask requests python-dotenv stripe
         - heroku config:set STRIPE_SECRET_KEY=Your_Stripe_Secret_Key
     - Deploy code "git push heroku master"
     - Open app "heroku open"
-        
-6. Create API Endpoints - [complete code](https://github.com/zukui1984/E-commerce-Flask/blob/master/app.py)
-   
-    -  GET /products: Fetches product data from eBay's sandbox API
-    -  POST /checkout: Creates a Stripe checkout session for payment processing.
-    
-7. To run the application
-```python
-python app.py
-```
-<img src="https://github.com/user-attachments/assets/00cc23bd-7d2c-4c1e-a159-594568f8ba2e" width="700" />
-
-8. To view product list - JSON
-```
-http://localhost:5000/products
-```
-<img src="https://github.com/user-attachments/assets/e15b02c3-27ef-4e25-bca4-9d14b034b940" width="700" />
-
-
-
-
 
 
