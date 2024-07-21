@@ -17,6 +17,9 @@ pip install Flask requests python-dotenv stripe
     - **Application Key**: App ID (Client ID), Dev ID, Cert ID (Client Secret)
     - Create Sandbox to get User Token
 5. Add API Key eBay (App ID & User Token) & Stripe on .env
-6. 
+6. To run the application
+```python
+python app.py
+```
 
 
