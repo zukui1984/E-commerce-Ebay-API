@@ -1,4 +1,5 @@
 # E-commerce eBay API
+A simple e-commerce REST API using Flask (Python), integrating with eBay's sandbox API to fetch product data & Stripe for payment processing. 
 
 ## Tech requirements
 1. Python / Flask (Python framework)
