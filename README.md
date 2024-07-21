@@ -6,13 +6,13 @@
 3. Heroku - Hosting
 4. API - eBay (products) and Stripe (payment)
 
-## File structure
-```bash
-ecommerce-flask/
+## Project structure
+```markdown
+ecommerce_project/
 ├── app.py
-├── .env
-├── templates/
-│   └── index.html
+└── templates/
+    └── index.html
+├── requirements.txt
 ```
 
 ## Instructions
