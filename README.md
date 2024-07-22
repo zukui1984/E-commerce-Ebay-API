@@ -1,11 +1,11 @@
-# E-commerce eBay API
+# E-commerce eBay API Integration
 A simple e-commerce REST API using Flask (Python), integrating with eBay's sandbox API to fetch product data & Stripe for payment processing. 
 
 ## Tech requirements
 1. Python / Flask (Python framework)
 2. eBay Developer Program
-3. Heroku - Hosting
-4. API - eBay (products) and Stripe (payment)
+3. API - eBay (products) and Stripe (payment)
+4. Heroku - Hosting (optional)
 
 ## Project structure
 ```markdown
@@ -34,8 +34,8 @@ pip install Flask requests python-dotenv stripe
         
 5. Create API Endpoints - [complete code](https://github.com/zukui1984/E-commerce-Flask/blob/master/app.py)
    
-    -  GET /products: Fetches product data from eBay's sandbox API
-    -  POST /checkout: Creates a Stripe checkout session for payment processing.
+    -  **GET /products**: Fetches product data from eBay's sandbox API
+    -  **POST /checkout**: Creates a Stripe checkout session for payment processing.
     
 6. To run the application
 ```python
@@ -49,16 +49,15 @@ http://localhost:5000/products
 ```
 <img src="https://github.com/user-attachments/assets/e15b02c3-27ef-4e25-bca4-9d14b034b940" width="700" />
 
-8. Set up Heroku
-    - Install & register heroku  
-    - Run "heroku login"
-    - Run "create heroku ecommerce_2024"
-    - Setup environment variables
-        - heroku config:set EBAY_APP_ID=Your_eBay_App_ID
-        - heroku config:set EBAY_OAUTH_TOKEN=Your_eBay_OAuth_Token
-        - heroku config:set STRIPE_PUBLISHABLE_KEY=Your_Stripe_Publishable_Key
-        - heroku config:set STRIPE_SECRET_KEY=Your_Stripe_Secret_Key
-    - Deploy code "git push heroku master"
-    - Open app "heroku open"
-
-
+## (Optional) Hosting ##
+### Setup Heroku  ###
+- Install & register heroku
+- Run "heroku login"
+- Run "create heroku ecommerce_2024"
+- Setup environment variables: 
+    - heroku config:set EBAY_APP_ID=Your_eBay_App_ID
+    - heroku config:set EBAY_OAUTH_TOKEN=Your_eBay_OAuth_Token
+    - heroku config:set STRIPE_PUBLISHABLE_KEY=Your_Stripe_Publishable_Key
+    - heroku config:set STRIPE_SECRET_KEY=Your_Stripe_Secret_Key
+-    Deploy code "git push heroku master"
+-    Open app "heroku open"
