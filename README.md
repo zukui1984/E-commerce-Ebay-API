@@ -49,15 +49,3 @@ http://localhost:5000/products
 ```
 <img src="https://github.com/user-attachments/assets/e15b02c3-27ef-4e25-bca4-9d14b034b940" width="700" />
 
-## (Optional) Hosting ##
-### Setup Heroku  ###
-- Install & register heroku
-- Run "heroku login"
-- Run "create heroku ecommerce_2024"
-- Setup environment variables: 
-    - heroku config:set EBAY_APP_ID=Your_eBay_App_ID
-    - heroku config:set EBAY_OAUTH_TOKEN=Your_eBay_OAuth_Token
-    - heroku config:set STRIPE_PUBLISHABLE_KEY=Your_Stripe_Publishable_Key
-    - heroku config:set STRIPE_SECRET_KEY=Your_Stripe_Secret_Key
--    Deploy code "git push heroku master"
--    Open app "heroku open"
