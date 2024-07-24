@@ -1,5 +1,5 @@
 # E-commerce eBay API Integration
-A simple e-commerce REST API using Flask (Python), integrating with eBay's sandbox API to fetch product data & Stripe for payment processing. 
+A simple e-commerce REST API using Flask (Python), integrating with eBay's sandbox API to fetch product data. 
 
 ## Tech requirements
 1. Python / Flask (Python framework)
@@ -20,17 +20,11 @@ ecommerce_project/
 1. Create an account at eBay Developer Programs for API
 <img src="https://github.com/user-attachments/assets/b912c99d-763a-47b8-90cd-0b2b0f136ac6" width="700" />
 
-2. Install Flask, dotenv (.env), Stripe
+2. Install Flask, dotenv (.env)
 ```python
-pip install Flask requests python-dotenv stripe
+pip install Flask requests python-dotenv 
 ```
 3. Create .env folder (environment variables - security)
-```python
-EBAY_APP_ID=ID_KEY
-EBAY_AUTH_TOKEN=TOKEN_KEY
-STRIPE_PUBLISHABLE_KEY=pk_test_KEY
-STRIPE_SECRET_KEY=sk_test_KEY
-```
 4. Create eBay - Application Key & User Token (Auth'n'Auth)
     - Create project name: **ecommerce_2024**
     - **Application Key**: App ID (Client ID), Dev ID, Cert ID (Client Secret)
@@ -40,6 +34,11 @@ STRIPE_SECRET_KEY=sk_test_KEY
 5. Add API Key eBay (App ID & User Token) & Stripe on .env
    
 <img src="https://github.com/user-attachments/assets/17e6fef9-4d22-4956-bbd6-2173915df976" width="700" />
+
+```python
+EBAY_APP_ID=ID_KEY
+EBAY_AUTH_TOKEN=TOKEN_KEY
+```
         
 6. Create API Endpoints - [complete code](https://github.com/zukui1984/E-commerce-Flask/blob/master/app.py)
    
