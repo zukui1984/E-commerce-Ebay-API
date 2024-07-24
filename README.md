@@ -24,7 +24,13 @@ ecommerce_project/
 ```python
 pip install Flask requests python-dotenv stripe
 ```
-3. Create .env (Environment Variables - Security)
+3. Create .env folder (environment variables - security)
+```python
+EBAY_APP_ID=ID_KEY
+EBAY_AUTH_TOKEN=TOKEN_KEY
+STRIPE_PUBLISHABLE_KEY=pk_test_KEY
+STRIPE_SECRET_KEY=sk_test_KEY
+```
 4. Create eBay - Application Key & User Token (Auth'n'Auth)
     - Create project name: **ecommerce_2024**
     - **Application Key**: App ID (Client ID), Dev ID, Cert ID (Client Secret)
